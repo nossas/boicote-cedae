@@ -88,3 +88,9 @@ $("form").on "submit", (event) ->
     dataType: "json"
 
   event.preventDefault()
+
+$("a.facebook-share").on "click", (event) ->
+  url = encodeURIComponent(location.href)
+  window.open "https://www.facebook.com/sharer/sharer.php?u=#{url}", 'facebook-share-dialog', 'width=626,height=436'
+
+  event.preventDefault()
