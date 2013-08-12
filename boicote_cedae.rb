@@ -1,4 +1,7 @@
+require "action_mailer"
+
 require "./models/user"
+require "./mailers/user_mailer"
 
 class BoicoteCedae < Sinatra::Application
   register Sinatra::ActiveRecordExtension
@@ -14,10 +17,12 @@ class BoicoteCedae < Sinatra::Application
     end
 
     set :sass, Compass.sass_engine_options
+    ActionMailer::Base.view_paths = File.join(Sinatra::Application.root, 'views')
   end
 
   configure :development do
     set :database, 'sqlite:///db/development.sqlite'
+    ActionMailer::Base.delivery_method = :test
   end
 
   configure :production do
@@ -31,6 +36,15 @@ class BoicoteCedae < Sinatra::Application
       database:  db.path[1..-1],
       encoding:  'utf8'
     )
+
+    ActionMailer::Base.smtp_settings = {
+      address: "smtp.sendgrid.net",
+      port: '25',
+      authentication: :plain,
+      user_name: ENV['SENDGRID_USERNAME'],
+      password: ENV['SENDGRID_PASSWORD'],
+      domain: ENV['SENDGRID_DOMAIN'],
+    }
   end
 
   get "/" do
