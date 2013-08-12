@@ -1,5 +1,5 @@
 require "bundler"
 Bundler.require
 
-require './nao_quer_mais'
-require 'sinatra/activerecord/rake' 
+require './boicote_cedae'
+require 'sinatra/activerecord/rake'
