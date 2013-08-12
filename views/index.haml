@@ -1,0 +1,95 @@
+!!!
+%html
+  %head
+    %link{ href: 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400', rel: 'stylesheet',  type: 'text/css' }
+    %link{ rel: 'stylesheet', href: '/stylesheets/application.css'}
+
+  %body
+    %header
+      .container
+        .brand
+          Meu Rio
+        .signboard
+          .label Cariocas boicotando a Cedae
+          .numbers{ data: { total: @counter } }
+            %span.number 0
+            %span.number 0
+            %span.number 0
+            %span.number 0
+            %span.number 0
+            %span.number 0
+
+    .container
+      %section#cedae-quer-meu-dinheiro
+        %h1 Cedae, se você quer o meu dinheiro, vem pegar o meu cocô!
+
+        %p O Rio cansou da impunidade da Cedae! 
+        %p Em 2012 foram mais de 34 mil ações movidas contra a empresa. Mas o STJ ordenou o congelamento de todas essas ações, pois a Cedae não teria como arcar com as despesas! Ou seja: tiraram nosso último recurso de exigir um serviço decente de  água e esgoto para todos os cariocas. Se não podemos entrar na justiça, temos que encontrar uma outra maneira de pressionar a Cedae.  Por isso, no dia 1º de outubro, começaremos um boicote à Cedae para constranger o Governador Sergio Cabral e obrigá-lo a rever algumas práticas da empresa que ele deveria vigiar.
+
+      %section#participe
+        #thanks
+          %h2 Obrigado por participar!
+          %p 
+            Vamos manter você atualizado por email. Mas se quiser ficar ligado nas últimas notícias sobre essa e outras mobilizações, curta a gente no Facebook em 
+            %a{ href: "http://www.facebook.com/meurio", target: "_blank" } http://facebook.com/meurio
+            \.
+
+          %p E não se esqueça de compartilhar essa ação com pelo menos 5 amigos! Quanto mais gente se comprometer em boicotar a Cedae, mais pressão no Governador.
+        
+        #form
+          %h2 Participe do boicote à Cedae!
+
+          %form
+            .fields
+              %input{ type: "text", name: "user[name]", id: "user-name", placeholder: "Escreva seu nome" }
+              %input{ type: "text", name: "user[email]", id: "user-email", placeholder: "Escreva seu email" }
+
+            .buttons
+              %button
+                Quero participar!
+
+      %section#por-que
+        .blue-title
+          %h2 Por que boicotar a Cedae?
+
+        %p A partir do dia 1/10 começaremos um processo em massa de pagamento da conta d’água em juízo. Isso quer dizer que pagaremos as contas à justiça e ela segurará o valor. Assim a Cedae não recebe nada até liberarmos o pagamento. E só vamos liberar o pagamento quando o Governador se comprometer com as seguintes demandas: 
+
+        %dl
+          %dt#por-que-1 Revogação do decreto 25.997/2000, que dá super-poderes ao presidente da Cedae.
+          %dd No ano 2000, o então governador Anthony Garotinho editou um decreto que autoriza o presidente da Cedae a aumentar as tarifas de água e esgoto de acordo com os gastos da empresa, sem a necessidade de autorização de um órgão regulador. Isso faz com que a conta de água e esgoto aumente mais do que o IPCA (Índice Nacional de Preços ao Consumidor Amplo). Isso tem que acabar! O presidente da Cedae não pode ter esse poder! 
+
+          %dt#por-que-2 Regulação da Cedae antes do fim do mandato. 
+          %dd O governador Sergio Cabral editou um decreto no fim do ano passado dizendo que a Cedae passará a agir sob o comando de uma agência reguladora apenas em agosto de 2015. Com isso, Cabral joga para seu sucessor a batata quente. Como a agência que fiscalizará a Cedae já existe, esse prazo pode ser muito menor!
+          
+          %dt#por-que-3 Investimento do PAC 2 para saneamento na Rocinha. 
+          %dd Dos 1,6 bilhão de reais previstos para o PAC 2 da Rocinha, quase metade (700 milhões) será gasta na implementação de um teleférico, obra que, de acordo com os moradores, não é uma prioridade para a comunidade. Queremos que esse dinheiro seja investido em saneamento básico: a grande necessidade da Rocinha. 
+
+          %dt#por-que-4 Pedido de descongelamento de todas as ações movidas contra a Cedae. 
+          %dd Uma decisão do STJ congelou todas as ações movidas contra a Cedae na Justiça. Só em 2012, foram mais de 34mil. O que se diz é que, se todos os processos fossem quitados em um curto espaço de tempo, a empresa iria à falência. A opção de recorrer à Justiça é um direito constitucional e não pode ser revogado! 
+
+          %dt#por-que-5 Fim da cobrança de esgoto para quem não tem esgoto.
+          %dd Parece piada, mas é verdade. A Cedae cobra taxa de esgoto até de quem vive em áreas aonde não há rede coletora de esgoto. É ou não é uma cara de pau? 
+
+          %dt#por-que-6 Novo acordo da prefeitura com governo do estado para implantação de saneamento em favelas.
+          %dd Em 2007, um convênio assinado entre Prefeitura e Estado fez com que o esgoto de grande parte da Zona Oeste e de todas as favelas do Rio ficassem sob responsabilidade do município. Entretanto, quase nada foi feito nas favelas cariocas.
+
+      %section#duvidas
+        .blue-title
+          %h2 Dúvidas
+
+        %dl
+          %dt Eu posso ser processado ou ficar com o nome sujo? A Cedae pode cortar minha água?
+          %dd Não. Se você depositar o valor da sua conta em juízo, você já cumpriu com o seu dever. A diferença é que o valor da sua conta só será repassado à Cedae com a sua autorização.
+
+          %dt Eu moro em prédio ou condomínio e quem paga a conta de água e esgoto é o administrador do condomínio. Como eu faço para participar?
+          %dd Em primeiro lugar, você pode mostrar seu compromisso com o boicote se registrando nos campos acima. Em seguida peça para o seu síndico ou administrador de condomínio depositar a sua parte da conta de água e esgoto em juízo, como explicamos no item um. Por último, converse com os seus vizinhos, explique os motivos dessa ação e convide-os a participarem.
+
+          %dt Vai adiantar alguma coisa? 
+          %dd Bom, pensa com a gente como seria se milhares de clientes seus, insatisfeitos, dissessem: “Você vai me vender o seu produto, eu vou pagar por ele, mas você não vai receber nada. E vai ser assim até você melhorar o seu serviço.” 
+      
+    %footer
+      .brand
+        Meu Rio
+      
+    %script{ src: "http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" }
+    %script{src: "/javascripts/application.js"}
