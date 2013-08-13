@@ -19,9 +19,12 @@ class User < ActiveRecord::Base
 
     def mailchimp_sync
       gb = Gibbon::API.new(ENV['MAILCHIMP_API'])
-      gb.lists.subscribe({ id: ENV['MAILCHIMP_LIST_ID'], 
-                           email: { email: email }, 
-                           merge_vars: { FNAME: first_name, LNAME: last_name}, 
+      gb.lists.subscribe({ id: ENV['MAILCHIMP_LIST_ID'],
+                           email: { email: email },
+                           merge_vars: { FNAME: first_name, LNAME: last_name},
                            double_optin: false })
+      gb.lists.static_segment_members_add({ seg_id: ENV['MAILCHIMP_SEG_ID'],
+                                            id: ENV['MAILCHIMP_LIST_ID'],
+                                            batch: { email: email } })
     end
 end
