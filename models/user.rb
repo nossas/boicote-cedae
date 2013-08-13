@@ -25,6 +25,6 @@ class User < ActiveRecord::Base
                            double_optin: false })
       gb.lists.static_segment_members_add({ seg_id: ENV['MAILCHIMP_SEG_ID'],
                                             id: ENV['MAILCHIMP_LIST_ID'],
-                                            batch: { email: email } })
+                                            batch: [{ email: email }] })
     end
 end
