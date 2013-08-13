@@ -76,6 +76,7 @@ $("form").on "submit", (event) ->
     success: (response) ->
       form.find("input").val("")
       updateSignBoard(response.total)
+      $("#cedae-quer-meu-dinheiro").slideUp()
       $("#form").fadeOut ->
         $("#thanks").fadeIn()
     error: (xhr) ->
