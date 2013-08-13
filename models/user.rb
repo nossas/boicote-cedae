@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
                            merge_vars: { FNAME: first_name, LNAME: last_name},
                            double_optin: false })
       rescue
-        Rails.log.info "Email #{email} already subscribed"
+        puts "Email #{email} already subscribed"
       end
 
       begin
@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
                                               id: ENV['MAILCHIMP_LIST_ID'],
                                               batch: [{ email: email }] })
       rescue
-        Rails.log.info "Email #{email} already added into the segment"
+        puts "Email #{email} already added into the segment"
       end
     end
 end
