@@ -10,6 +10,7 @@ gem "sass"
 gem "compass"
 gem "rack-coffee"
 gem "actionmailer"
+gem "gibbon"
 
 group :development do
   gem "sqlite3"
@@ -18,4 +19,5 @@ end
 
 group :production do
   gem "pg"
+  gem "unicorn"
 end
