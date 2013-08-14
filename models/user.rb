@@ -14,7 +14,11 @@ class User < ActiveRecord::Base
 
   private
     def deliver_email
-      UserMailer.thanks(self).deliver
+      begin
+        UserMailer.thanks(self).deliver
+      rescue
+        puts "Email not sent"
+      end
     end
 
     def mailchimp_sync
